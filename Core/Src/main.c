@@ -39,6 +39,8 @@
 
 
 /* External variables --------------------------------------------------------*/
+/* These variables hold the remaining stack size of FreeRTOS tasks from where
+   they were respectively called from. */
 extern UBaseType_t TaskMCUPB_RSS;
 extern UBaseType_t TaskADCPWM_RSS;
 extern UBaseType_t TaskMCULED_RSS;
@@ -121,10 +123,6 @@ int main(void)
 
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
-	
-	/* Begin ADC DMA Sampling */
-
-	
   while (1)
   {
 
